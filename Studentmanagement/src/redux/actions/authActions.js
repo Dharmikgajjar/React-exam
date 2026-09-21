@@ -12,14 +12,14 @@ export const login = (email, password) => async (dispatch) => {
 
     if (user && user.password === password) {
       localStorage.setItem("authUser", JSON.stringify(user));
-      dispatch({ type: LOGIN_SUCCESS, payload: user });
+      dispatch({ type: LOGIN_SUCCESS, savedata: user });
       return { success: true };
     } else {
-      dispatch({ type: LOGIN_FAILURE, payload: "Invalid email or password" });
+      dispatch({ type: LOGIN_FAILURE, savedata: "Invalid email or password" });
       return { success: false, message: "Invalid email or password" };
     }
   } catch (error) {
-    dispatch({ type: LOGIN_FAILURE, payload: error.message });
+    dispatch({ type: LOGIN_FAILURE, savedata: error.message });
     return { success: false, message: error.message };
   }
 };
@@ -32,6 +32,6 @@ export const logout = () => (dispatch) => {
 export const loadUserFromStorage = () => (dispatch) => {
   const stored = localStorage.getItem("authUser");
   if (stored) {
-    dispatch({ type: LOGIN_SUCCESS, payload: JSON.parse(stored) });
+    dispatch({ type: LOGIN_SUCCESS, savedata: JSON.parse(stored) });
   }
 };
