@@ -1,0 +1,57 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "Ajay Shriman ",
+      "std": "Standard- 10th",
+      "subject": "Social Science",
+      "marks": 77,
+      "totalMarks": 100,
+      "examType": "Online Exam",
+      "image": "https://dukaan.b-cdn.net/700x700/webp/107019/a22bdd31-cfa9-48ec-8b6f-7bc76f951a01.png"
+    },
+    {
+      "id": "2",
+      "name": "Yesha pabari",
+      "std": "Standard- 10th",
+      "subject": "Environmental Studies",
+      "marks": 77,
+      "totalMarks": 100,
+      "examType": "Class Exam",
+      "image": "https://i.pinimg.com/originals/06/24/a8/0624a81d4ef2bde047541961690a089a.jpg"
+    },
+    {
+      "name": "abvc",
+      "grade": "10th",
+      "subject": "Science",
+      "marks": 80,
+      "totalMarks": 100,
+      "examType": "Online Exam",
+      "image": "https.//www.google.com.jpeg",
+      "id": "iikLIeW"
+    },
+    {
+      "name": "bbbbb",
+      "grade": "11th std ",
+      "subject": "English Grammar",
+      "marks": 60,
+      "totalMarks": 100,
+      "examType": "Missed Exam",
+      "phone": "1234567890",
+      "email": "abc@gmail.com",
+      "age": 16,
+      "image": "https.//www.google.com.jpeg",
+      "id": "DIcbd7R"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Revati Bhatnagar",
+      "school": "Red & white skill Education",
+      "email": "revati.b@rw.com",
+      "password": "divine123",
+      "image": "https://media.licdn.com/dms/image/v2/D4E03AQG-Uo5J9HzGSg/profile-displayphoto-scale_200_200/B4EZqB88jUKcAY-/0/1763116830131?e=2147483647&v=beta&t=uWbBW9WMUSGpB8vZ2vmS_IA4yctT-IJpB8w5Z0UX82c"
+    }
+  ]
+}
