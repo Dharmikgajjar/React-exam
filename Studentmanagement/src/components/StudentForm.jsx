@@ -48,7 +48,7 @@ const StudentForm = ({ studentId, onDone }) => {
     e.preventDefault();
     setSubmitting(true);
 
-    const payload = {
+    const savedata = {
       ...form,
       marks: Number(form.marks),
       totalMarks: Number(form.totalMarks) || 100,
@@ -59,9 +59,9 @@ const StudentForm = ({ studentId, onDone }) => {
     };
 
     if (isEdit) {
-      await dispatch(updateStudent(id, payload));
+      await dispatch(updateStudent(id, savedata));
     } else {
-      await dispatch(addStudent(payload));
+      await dispatch(addStudent(savedata));
     }
     setSubmitting(false);
     onDone?.();
