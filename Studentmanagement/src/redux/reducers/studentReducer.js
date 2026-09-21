@@ -19,26 +19,26 @@ const studentReducer = (state = initialState, action) => {
       return { ...state, loading: true, error: null };
 
     case FETCH_STUDENTS_SUCCESS:
-      return { ...state, loading: false, students: action.payload };
+      return { ...state, loading: false, students: action.savedata };
 
     case FETCH_STUDENTS_FAILURE:
-      return { ...state, loading: false, error: action.payload };
+      return { ...state, loading: false, error: action.savedata };
 
     case ADD_STUDENT_SUCCESS:
-      return { ...state, students: [...state.students, action.payload] };
+      return { ...state, students: [...state.students, action.savedata] };
 
     case UPDATE_STUDENT_SUCCESS:
       return {
         ...state,
         students: state.students.map((s) =>
-          s.id === action.payload.id ? { ...s, ...action.payload } : s
+          s.id === action.savedata.id ? { ...s, ...action.savedata } : s
         ),
       };
 
     case DELETE_STUDENT_SUCCESS:
       return {
         ...state,
-        students: state.students.filter((s) => s.id !== action.payload),
+        students: state.students.filter((s) => s.id !== action.savedata),
       };
 
     default:
